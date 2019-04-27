@@ -347,7 +347,7 @@ function Navigation(options) {
         });
         webview[0].addEventListener("new-window", (res) => {
             if (!(options.newWindowFrameNameBlacklistExpression instanceof RegExp && options.newWindowFrameNameBlacklistExpression.test(res.frameName))) {
-                NAV.newTab(res.url, {
+                NAV.newTab(res.url || res.detail && res.detail.url, {
                     icon: NAV.TAB_ICON
                 });
             }
