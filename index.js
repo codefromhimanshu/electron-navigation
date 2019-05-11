@@ -457,7 +457,7 @@ Navigation.prototype.newTab = function (url, options) {
     if (options.icon == 'clean') {
         tab += '<i class="nav-tabs-favicon nav-icons">' + this.SVG_FAVICON + '</i>';
     } else if (options.icon === 'default') {
-        tab += '<img class="nav-tabs-favicon nav-icons" src=""/>';
+        tab += '<img class="nav-tabs-favicon nav-icons" />';
     } else {
         tab += '<img class="nav-tabs-favicon nav-icons" src="' + options.icon + '"/>';
     }
